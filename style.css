@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* 
+Ojala usen variables
+Ejemplo:
+--background: #222; 
+--fuente_principal: "Poppins";
+
+estan funcionan como todas las variables que usan todos los lenguajes de programacion.
+*/
+
+* {
+  --background: #222;
+  --fuente_principal: "Poppins";
+
+  padding: 0;
+  margin: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+
+
+body {
+  font-family: var(--fuente_principal), sans-serif;
+  background-color: var(--background);
+}
+
+header {
+
+  width: 100%;
+  height: 100vh;
+  /* Ajustado para ocupar todo el alto de la pantalla */
+  background-image: url(./imagenes/faro2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  /* Flexbox para alinear contenido */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+/* 
+NAV VAR SECTION
+ */
+
+nav {
+  height: 100px;
+  max-width: 1200px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(60, 60, 60, 0.95);
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+
+.nav-menu li a {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+  color: #9900ff;
+  transition: 0.3s;
+}
+
+
+.logo {
+  width: 30px;
+  margin-left: 10px;
+
+}
+
+.bar-btn {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+
+#check {
+  display: none;
+}
+
+#check:checked~.nav-menu {
+  height: 100vh;
+}
+
+#check:checked~.nav-menu li {
+  display: block;
+}
+
+.banner-tex {
+  padding-top: 10px;
+  text-align: center;
+
+}
+
+.banner-text h1 {
+  color: #fffbfb;
+  font-size: 40px;
+  text-transform: uppercase;
+
+}
+
+.banner-tex p {
+  color: #f0f0f0;
+  font-size: 18px;
+  padding: 30px;
+
+}
+
+/* 
+MEDIA SECTION 
+*/
+
+/* 
+OJO QUE ESTA ES LA SECCION DE LA PAGINA EN PANTALLA GRANDE
+ */
+
+ @media (max-width: 768px) {
+  body {
+    background-color: #222; /* Fondo negro */
+    color: white; /* Texto blanco */
+  }
+
+  .nav-menu {
+    background: #222; 
+  }
+
+  .nav-menu li a {
+    color: white; 
+  }
+
+  h1, h2 {
+    text-align: center;
+    font-size: 22px; 
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 15px; 
+  }
+
+  table {
+    width: 100%;
+    max-width: 600px; 
+    margin: 10px auto; 
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    color: #000000;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #9900ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #7700cc;
+  }
+}
+
+
+
+@media (width > 768px) {
+
+  .logo {
+    margin-left: 0;
+  }
+
+
+  nav {
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .nav__imagen {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .bar-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+
+  .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+  }
+
+  .nav-menu li a {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+
+  .banner-text {
+    padding: 20px;
+  }
+
+
+  .banner-text h1 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  .banner-text p {
+    padding: 30px 200px;
+    color: #f0f0f0;
+  }
+
+}
+
+/*--------------------------------------*/
+
+
+/* Estilos para la sección de deportes */
+.seccion {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: white;
+}
+
+/* Estilos para video y audio */
+video, audio {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+/* Estilos para el botón */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #000000;
+}
