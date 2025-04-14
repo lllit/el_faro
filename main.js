@@ -125,8 +125,7 @@ document.getElementById('formArticulo').addEventListener('submit', function (e) 
 
         alert("Artículo agregado correctamente");
 
-        // Volver a inicializar los contadores
-        inicializarContadores();
+        
 
         // Limpiar el formulario
         this.reset();
@@ -170,8 +169,10 @@ function contarArticulosEnSeccion() {
     } else {
         console.warn('No se encontró el contenedor con la clase "contenedor-articulos".');
     }
+
 }
 
+contarArticulosEnSeccion();
 
 // Inicialización al cargar la página
 window.onload = function () {
