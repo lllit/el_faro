@@ -41,14 +41,16 @@ function contarArticulosPorCategoria() {
     };
 
     const contador = contarArticulosEnSeccion()
+
     articulos.forEach(articulo => {
         if (contadores[articulo.categoria] !== undefined) {
             contadores[articulo.categoria] = contador;
         }
     });
+    contadores[articulos.categoria] = contador;
 
     // Actualizamos los contadores correspondientes
-    document.getElementById('contadorDeportes').textContent = contadores.Deportes || 0;
+    document.getElementById('contadorDeportes').textContent = contador || 0;
     document.getElementById('contadorNoticias').textContent = contadores.Noticias || 0;
     document.getElementById('contadorNegocios').textContent = contadores.Negocios || 0;
 }
