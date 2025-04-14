@@ -91,20 +91,16 @@ NAV VAR SECTION
  */
 
 nav {
-  height: 100px;
+  height: 90px;
   max-width: auto;
   margin: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 1rem;
   z-index: 30;
-
-
-
-
+  
 }
 
 .nav-menu {
@@ -196,15 +192,11 @@ nav {
 
 /* Estilos para la sección de deportes */
 .seccion {
-  padding: 40px;
+  padding: 1rem;
   text-align: center;
   background-color: var(--background);
-  border-radius: 10px;
-
+  /* border-radius: 10px; */
   color: var(--color-texto);
-
-
-
 }
 
 h2,
@@ -250,7 +242,7 @@ audio {
 button {
   display: block;
   margin: 20px auto;
-  padding: 10px 20px;
+  padding: 0;
   font-size: 16px;
   color: white;
   background-color: #000000;
@@ -275,6 +267,16 @@ button:hover {
   gap: 20px;
   padding: 20px;
   justify-content: center;
+}
+
+.contenedor-articulos>#contenedorArticulosNegocios,
+#contenedorArticulosDeportes,
+#contenedorArticulosNoticias {
+  display: contents;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+
 }
 
 /* ESTILOS DE LOS ARTÍCULOS */
@@ -362,11 +364,176 @@ a:hover {
 MEDIA SECTION 
 */
 
+
+.formulario-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.formulario-flotante h3 {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.formulario-flotante input,
+.formulario-flotante textarea,
+.formulario-flotante select {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.formulario-flotante button {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.formulario-flotante button:hover {
+  background-color: #222;
+}
+
+
+/* CONTACTO */
+
+.form-container {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: black;
+  width: 45%;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  border: none;
+  /* Elimina bordes predeterminados */
+  border-bottom: 2px solid black;
+  /* Agrega línea inferior */
+  outline: none;
+  /* Elimina el contorno al seleccionar */
+  padding: 5px;
+  /* Opcional: Agrega espacio interno */
+  font-size: 16px;
+  /* Opcional: Ajusta el tamaño del texto */
+}
+
+
+.btn-enviar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #0056b3;
+}
+
+.form-container body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f26b;
+
+}
+
+
+.contador {
+  width: 100%;
+  text-align: end;
+  justify-items: end;
+  border-radius: 10rem;
+
+}
+
+.contador>p {
+  background-color: var(--articulo-fondo);
+  border-color: #000;
+  box-shadow: 3px 5px 1px #6d030348;
+  width: 250px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  color: var(--color-texto);
+}
+
+input[type="text"] {
+  border: none;
+  /* Elimina bordes predeterminados */
+  border-bottom: 2px solid black;
+  /* Agrega línea inferior */
+  outline: none;
+  /* Elimina el contorno al seleccionar */
+  padding: 5px;
+  /* Opcional: Agrega espacio interno */
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 50%;
+  height: auto;
+  max-height: 150px;
+  resize: none;
+  overflow: auto;
+}
+
+
 /* 
 PANTALLA PARA MÓVIL
  */
 
-@media (max-width: 768px) {
+@media (max-width: 894px) {
   body {
     background-color: #222;
     color: white;
@@ -422,13 +589,122 @@ PANTALLA PARA MÓVIL
     grid-template-columns: 1fr;
   }
 
+
+
+  .formulario-flotante h3 {
+    font-size: 1rem;
+  }
+
+  .contenedor-articulos {
+    padding: 10px;
+  }
+
+  .articulo {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+
+
+  .btn-flotante {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+    width: 3rem;
+    height: 3rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-flotante__icon {
+    display: inline-block;
+    /* Asegura que el icono mantenga su posición */
+    text-align: center;
+    /* Centra el texto en el interior del ícono */
+  }
+  
+
+
+
+  /* Formulario flotante */
+  .formulario-flotante {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Oculto por defecto */
+  }
+
+  .reloj-cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 0.7rem;
+  }
+
+
+  button.btn-cerrar {
+    top: 0.1rem;
+    right: 1rem;
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  button.btn-cerrar:hover {
+    background-color: #31231e;
+    color: wheat;
+  }
+
+  #contenedorArticulosNegocios {
+    display: contents;
+    gap: 10px;
+  }
+
+  .contador {
+    margin-bottom: 1rem;
+  }
+
+  .contador>p {
+    font-size: 0.7rem;
+    width: 10rem;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
 }
 
 /* 
   PANTALLA PARA PC
 */
 
-@media (width > 768px) {
+@media (width > 894px) {
+
 
   .logo {
     margin-left: 0;
@@ -469,10 +745,6 @@ PANTALLA PARA MÓVIL
 
   }
 
-
-
-
-
   .nav-menu li {
     display: flex;
     justify-content: center;
@@ -484,12 +756,16 @@ PANTALLA PARA MÓVIL
 
   .nav-menu li a {
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0;
     margin: 0;
   }
 
   /* ---------------------------- */
+
+
+
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -516,5 +792,73 @@ PANTALLA PARA MÓVIL
     padding: 30px 200px;
     color: #f0f0f0;
   }
+
+  .reloj-cabecera {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Fondo más oscuro */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    /* Sombra negra intensa */
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /* Formulario flotante */
+  .formulario-flotante {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Oculto por defecto */
+  }
+
+  button.btn-cerrar {
+    top: 0.1rem;
+    right: 1rem;
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  button.btn-cerrar:hover {
+    background-color: #31231e;
+    color: wheat;
+  }
+
 
 }

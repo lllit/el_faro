@@ -17,45 +17,92 @@
             <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
         </div>
         <input type="checkbox" id="check">
+        <ul class="nav-menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a class="active" href="../paginas/deportes_page.html">Deportes</a></li>
+            <li><a href="../paginas/negocios_page.html">Negocios</a></li>
+            <li><a href="../paginas/noticias_page.html">Noticias</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <div id="fechaHora" class="reloj-cabecera"></div>
         <label for="check" class="bar-btn">
             <i class="fas fa-bars"></i>
         </label>
-        <ul class="nav-menu">
-            <li><a class="active" href="../index.html">Inicio</a></li>
-            <li><a href="../paginas/deportes_page.html">Deportes</a></li>
-            <li><a href="../paginas/negocios_page.html">Negocios</a></li>
-            <li><a href="../paginas/noticias_page.html">Noticias</a></li>
-        </ul>
+        <!-- FORMULARIO FLOTANTE -->
+        <section class="formulario-flotante" id="formulario">
+            <button class="btn-cerrar" onclick="cerrarFormulario()">×</button>
+            <form id="formArticulo">
+                
+                <h3>Nuevo artículo</h3>
+                <input type="text" id="tituloArticulo" placeholder="Título" required>
+                <textarea id="contenidoArticulo" placeholder="Descripción" required></textarea>
+                <select id="categoriaArticulo" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Noticias">Noticias</option>
+                    <option value="Negocios">Negocios</option>
+                </select>
+                <button type="submit">Agregar</button>
+                
+            </form>
+            
+        </section>
+        <!-- BOTÓN FLOTANTE -->
+        <button class="btn-flotante" onclick="toggleFormulario()">
+            <i class="btn-flotante__icon">+</i>
+        </button>
     </nav>
-    
+
     <section class="seccion">
+        <div class="contador">
+            <p>Total de artículos: <span id="contadorDeportes">0</span></p>
+        </div>
+        
+        
         <h2>Deportes</h2>
         
         <div class="contenedor-articulos">
+            
+
             <article class="articulo">
                 <h3>Chile otra vez con la calculadora...</h3>
                 <p><strong>Categoría:</strong> Fútbol</p><br>
-                <p>Chile otra vez en la cuerda floja para el mundial. Chile continúa viviendo una angustiante lucha por conseguir su clasificación al Mundial de 2026. Después de su reciente empate en casa, las probabilidades de acceder al torneo internacional son mínimas. A falta de pocos partidos, la selección chilena necesita una combinación perfecta de resultados para mantenerse con vida en la carrera. Aunque la situación es difícil, los hinchas y jugadores no pierden la esperanza y siguen confiando en que el milagro aún es posible.</p>
+                <p>Chile otra vez en la cuerda floja para el mundial. Chile continúa viviendo una angustiante lucha por
+                    conseguir su clasificación al Mundial de 2026. Después de su reciente empate en casa, las
+                    probabilidades de acceder al torneo internacional son mínimas. A falta de pocos partidos, la
+                    selección chilena necesita una combinación perfecta de resultados para mantenerse con vida en la
+                    carrera. Aunque la situación es difícil, los hinchas y jugadores no pierden la esperanza y siguen
+                    confiando en que el milagro aún es posible.</p>
             </article>
-    
+
             <article class="articulo">
                 <h3>Argentina clasifica con autoridad</h3>
                 <p><strong>Categoría:</strong> Fútbol</p><br>
-                <p>La selección argentina sigue mostrando su poderío en las eliminatorias, y tras un contundente 2-0 frente a Brasil, ya aseguró su lugar en el Mundial 2026. Con una actuación destacada de Lionel Messi y un equipo sólido en todas sus líneas, los campeones de América demostraron una vez más por qué son uno de los favoritos a llevarse el trofeo. Los aficionados celebran con entusiasmo, mientras el equipo se prepara para seguir con su marcha invicta.</p>
+                <p>La selección argentina sigue mostrando su poderío en las eliminatorias, y tras un contundente 2-0
+                    frente a Brasil, ya aseguró su lugar en el Mundial 2026. Con una actuación destacada de Lionel Messi
+                    y un equipo sólido en todas sus líneas, los campeones de América demostraron una vez más por qué son
+                    uno de los favoritos a llevarse el trofeo. Los aficionados celebran con entusiasmo, mientras el
+                    equipo se prepara para seguir con su marcha invicta.</p>
             </article>
-    
+
             <article class="articulo">
                 <h3>Los Esports cada día entran con más fuerza al panorama mundial</h3>
                 <p><strong>Categoría:</strong> E-Sports</p><br>
-                <p>El mundo de los Esports sigue creciendo a pasos agigantados, con figuras como Faker, uno de los jugadores más emblemáticos de League of Legends, marcando una nueva era en el competitivo. La industria sigue rompiendo barreras, con torneos de alto nivel que atraen a millones de espectadores alrededor del mundo. Los jugadores de Esports ya son considerados estrellas, y el potencial de este fenómeno no deja de asombrar a los fanáticos y expertos en tecnología y entretenimiento.</p>
+                <p>El mundo de los Esports sigue creciendo a pasos agigantados, con figuras como Faker, uno de los
+                    jugadores más emblemáticos de League of Legends, marcando una nueva era en el competitivo. La
+                    industria sigue rompiendo barreras, con torneos de alto nivel que atraen a millones de espectadores
+                    alrededor del mundo. Los jugadores de Esports ya son considerados estrellas, y el potencial de este
+                    fenómeno no deja de asombrar a los fanáticos y expertos en tecnología y entretenimiento.</p>
             </article>
+            
+            <div id="contenedorArticulosDeportes"></div>
         </div>
-    
+
         <h2>Chile y las complicaciones con el mundial</h2>
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/zjTimlLVBLE" frameborder="0" allowfullscreen></iframe>
         </div>
-    
+
         <h3>Entrevista Arturo Vidal</h3>
         <div class="media-container-audio">
             <audio controls>
@@ -63,13 +110,13 @@
                 Tu navegador no soporta el elemento de audio.
             </audio>
         </div>
-    
+
         <a href="../index.html" class="btn-volver">Volver al Menú</a>
     </section>
     <footer>
         <p>&copy; 2025 El Faro - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../main.js"></script>
 </body>
 
 </html>
