@@ -3,7 +3,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-    <a class="navbar-item" href="./index.php">
+    <a class="navbar-item" href="/api/index.php">
       <img src="/imagenes/logo.jpg" alt="Logo" class="logo">
     </a>
 
@@ -27,12 +27,12 @@
   <div id="navbarMenu" class="navbar-menu">
 
     <div class="navbar-start">
-      <a class="navbar-item" href="./paginas/deportes_page.php">Deportes</a>
-      <a class="navbar-item " href="./paginas/negocios_page.php">Negocios</a>
-      <a class="navbar-item " href="./paginas/noticias_page.php">Noticias</a>
-      <a class="navbar-item" href="./paginas/contacto.php">Contacto</a>
-      <a class="navbar-item" href="./paginas/avisos.php">Avisos</a>
-      <a class="navbar-item" href="./paginas/registro.php">Registro</a>
+      <a class="navbar-item" href="/paginas/deportes_page.php">Deportes</a>
+      <a class="navbar-item " href="/paginas/negocios_page.php">Negocios</a>
+      <a class="navbar-item " href="/paginas/noticias_page.php">Noticias</a>
+      <a class="navbar-item" href="/paginas/contacto.php">Contacto</a>
+      <a class="navbar-item" href="/paginas/avisos.php">Avisos</a>
+      <a class="navbar-item" href="/paginas/registro.php">Registro</a>
     </div>
 
   </div>
@@ -83,7 +83,7 @@
           <h3 class="title is-4">Argentina clasifica con autoridad</h3>
           <p class="subtitle is-6">Categoría: Deportes</p>
           <p>La selección argentina sigue mostrando su poderío en las eliminatorias...</p>
-          <a class="button is-link mt-2" href="./paginas/deportes_page.php">Leer más</a>
+          <a class="button is-link mt-2" href="/paginas/deportes_page.php">Leer más</a>
         </div>
       </div>
 
@@ -92,7 +92,7 @@
           <h3 class="title is-4">Los Esports cada día con más fuerza</h3>
           <p class="subtitle is-6">Categoría: Deportes</p>
           <p>El mundo de los Esports sigue creciendo con figuras como Faker...</p>
-          <a class="button is-link mt-2" href="./paginas/deportes_page.php">Leer más</a>
+          <a class="button is-link mt-2" href="/paginas/deportes_page.php">Leer más</a>
         </div>
       </div>
 
@@ -113,7 +113,7 @@
         <h4 class="title is-5">Chile otra vez con la calculadora...</h4>
         <p class="subtitle is-7">Deportes</p>
         <p class="is-size-7">La selección chilena sigue luchando por un lugar en el Mundial...</p>
-        <a class="is-link is-size-7" href="./paginas/deportes_page.php">Leer más</a>
+        <a class="is-link is-size-7" href="/paginas/deportes_page.php">Leer más</a>
       </div>
 
 
@@ -123,7 +123,7 @@
         <p class="subtitle is-7">Negocios</p>
         <p class="is-size-7">El portal Innova ofrece una guía para que las pequeñas y medianas empresas (PYMES)
           encuentren oportunidades de negocio en el...</p>
-        <a class="is-link is-size-7" href="./paginas/negocios_page.php">Leer más</a>
+        <a class="is-link is-size-7" href="/paginas/negocios_page.php">Leer más</a>
       </div>
 
 
@@ -131,13 +131,13 @@
         <h4 class="title is-5">Elon Musk proyecta un futuro dominado por robots.</h4>
         <p class="subtitle is-7">Noticias</p>
         <p class="is-size-7">Elon Musk asegura que los robots humanoides podrían revolucionar la ...</p>
-        <a class="is-link is-size-7" href="./paginas/noticias_page.php">Leer más</a>
+        <a class="is-link is-size-7" href="/paginas/noticias_page.php">Leer más</a>
       </div>
 
     </div>
   </div>
 </section>
-<script src="./main.js"></script>
+<script src="/main.js"></script>
 </body>
 
 </html>

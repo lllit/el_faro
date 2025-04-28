@@ -21,7 +21,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-            <a class="navbar-item" href="../index.php">
+            <a class="navbar-item" href="/api/index.php">
                 <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
             </a>
 

@@ -2,20 +2,21 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto | El Faro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias | El Faro</title>
   <link rel="stylesheet" href="../style.css">
   <script src="https://kit.fontawesome.com/2cb25f2c39.js"></script>
-  <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 
 <body>
+  <!-- MENU DE NAVEGACION -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-      <a class="navbar-item" href="../index.php">
+      <a class="navbar-item" href="/api/index.php">
         <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
       </a>
 
@@ -40,11 +41,11 @@
 
       <div class="navbar-start">
         <a class="navbar-item" href="../paginas/deportes_page.php">Deportes</a>
-        <a class="navbar-item " href="../paginas/negocios_page.php">Negocios</a>
-        <a class="navbar-item " href="../paginas/noticias_page.php">Noticias</a>
-        <a class="navbar-item is-active" href="../paginas/contacto.php">Contacto</a>
+        <a class="navbar-item" href="../paginas/negocios_page.php">Negocios</a>
+        <a class="navbar-item" href="../paginas/noticias_page.php">Noticias</a>
+        <a class="navbar-item" href="../paginas/contacto.php">Contacto</a>
         <a class="navbar-item" href="../paginas/avisos.php">Avisos</a>
-        <a class="navbar-item" href="../paginas/registro.php">Registro</a>
+        <a class="navbar-item is-active" href="../paginas/registro.php">Registro</a>
       </div>
 
     </div>
@@ -81,49 +82,39 @@
     </button>
   </nav>
 
-  <section class="seccion hero hero-gradient">
-    <!-- FORMULARIO DE CONTACTO -->
-    <section class="section">
-      <div class="container container-contacto">
-        <h2 class="title">Formulario de Contacto</h2>
-        <form action="/app/controllers/ContactoController.php" method="POST">
-
-          <div class="field">
-            <label class="label" for="nombre">Nombre</label>
-            <div class="control">
-              <input class="input" type="text" id="nombre" name="nombre" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label" for="email">Correo</label>
-            <div class="control">
-              <input class="input" type="email" id="email" name="email" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label" for="mensaje">Mensaje</label>
-            <div class="control">
-              <textarea class="textarea" id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-          </div>
-
-          <div class="control mt-4 control-btn">
-            <button type="submit" class="button is-link is-fullwidth">Enviar</button>
-          </div>
-
-        </form>
+  
+<section class="section">
+  <div class="container container-registro">
+    <h2 class="title">Registro</h2>
+    <form action="/app/controllers/RegistroController.php" method="POST">
+      <div class="field">
+        <label class="label">Correo</label>
+        <div class="control">
+          <input class="input" type="email" name="email" required>
+        </div>
       </div>
-    </section>
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control">
+          <input class="input" type="text" name="nombre" required>
+        </div>
+      </div>
 
+      <div class="field">
+        <label class="label">Contraseña</label>
+        <div class="control">
+          <input class="input" type="password" name="password" required>
+        </div>
+      </div>
+      <div class="control mt-4 control-btn">
+        <button class="button is-link is-fullwidth">Enviar</button>
+      </div>
+    </form>
+  </div>
+</section>
 
-  </section>
-  </section>
+<?php include('../app/views/partials/footer.php'); ?>
 
-  <?php include('../app/views/partials/footer.php'); ?>
-
-  <script src="../main.js"></script>
+<script src="../main.js"></script>
 </body>
-
 </html>

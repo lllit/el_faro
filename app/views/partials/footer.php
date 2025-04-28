@@ -12,7 +12,7 @@
 <div class="column is-3">
   <h3 class="title is-6 has-text-white">Navegación</h3>
   <ul>
-    <li><a href="../index.php" class="has-text-light">Inicio</a></li>
+    <li><a href="/api/index.php" class="has-text-light">Inicio</a></li>
     <li><a href="../paginas/deportes_page.php" class="has-text-light">Deportes</a></li>
     <li><a href="../paginas/negocios_page.php" class="has-text-light">Negocios</a></li>
     <li><a href="../paginas/noticias_page.php" class="has-text-light">Noticias</a></li>

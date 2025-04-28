@@ -2,21 +2,20 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avisos | El Faro</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | El Faro</title>
+  <link rel="stylesheet" href="../style.css">
   <script src="https://kit.fontawesome.com/2cb25f2c39.js"></script>
-  <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 
 <body>
-  <!-- MENU DE NAVEGACION -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-      <a class="navbar-item" href="../index.php">
+      <a class="navbar-item" href="/api/index.php">
         <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
       </a>
 
@@ -43,8 +42,8 @@
         <a class="navbar-item" href="../paginas/deportes_page.php">Deportes</a>
         <a class="navbar-item " href="../paginas/negocios_page.php">Negocios</a>
         <a class="navbar-item " href="../paginas/noticias_page.php">Noticias</a>
-        <a class="navbar-item" href="../paginas/contacto.php">Contacto</a>
-        <a class="navbar-item is-active" href="../paginas/avisos.php">Avisos</a>
+        <a class="navbar-item is-active" href="../paginas/contacto.php">Contacto</a>
+        <a class="navbar-item" href="../paginas/avisos.php">Avisos</a>
         <a class="navbar-item" href="../paginas/registro.php">Registro</a>
       </div>
 
@@ -82,46 +81,49 @@
     </button>
   </nav>
 
-  <section class="seccion">
-    <br><br>
-    <h2 class="title">Avisos</h2>
-    <div class="contenedor-articulos">
+  <section class="seccion hero hero-gradient">
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="section">
+      <div class="container container-contacto">
+        <h2 class="title">Formulario de Contacto</h2>
+        <form action="/app/controllers/ContactoController.php" method="POST">
+
+          <div class="field">
+            <label class="label" for="nombre">Nombre</label>
+            <div class="control">
+              <input class="input" type="text" id="nombre" name="nombre" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="email">Correo</label>
+            <div class="control">
+              <input class="input" type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="mensaje">Mensaje</label>
+            <div class="control">
+              <textarea class="textarea" id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+          </div>
+
+          <div class="control mt-4 control-btn">
+            <button type="submit" class="button is-link is-fullwidth">Enviar</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
 
 
-
-      <!-- Artículos estáticos originales -->
-      <article class="is-one-third box">
-        <h3 class="title is-4">¡Próximamente contaremos con nuestra propia App!</h3>
-        <button class="button">
-          <p><span class="subtitle">Categoría:</span> Avisos</p>
-        </button>
-        <p>Estamos desarrollando una aplicación móvil para que vivas toda la experiencia de El Faro desde la palma de tu mano. Noticias, notificaciones en tiempo real y acceso a contenido exclusivo, todo en una sola app. ¡Espérala pronto!</p>
-      </article>
-
-      <article class="is-one-third box">
-        <h3 class="title is-4">¿Te imaginas un juego que te ayude a estudiar?</h3>
-        <button class="button">
-          <p><span class="subtitle">Categoría:</span> Avisos</p>
-        </button>
-        <p>El Faro se une a StudyPals en una colaboración sin precedentes. Prepárate para descubrir un juego que no solo entretiene, sino que también potencia tu productividad. ¡Estudiar nunca fue tan divertido!</p>
-      </article>
-
-      <article class="is-one-third box">
-        <h3 class="title is-4">Convocatoria abierta: ¡Forma parte de El Faro!</h3>
-        <button class="button">
-          <p><span class="subtitle">Categoría:</span> Avisos</p>
-        </button>
-        <p>¿Te apasiona escribir, crear contenido o cubrir eventos? Únete a nuestro equipo de colaboradores y sé parte de una comunidad que busca informar, entretener y transformar. Postulaciones abiertas todo abril.</p>
-      </article>
-
-      <div id="contenedorArticulosNoticias"></div>
-    </div>
-
-    <a href="../index.html" class="button">Volver al Menú</a>
+  </section>
   </section>
 
   <?php include('../app/views/partials/footer.php'); ?>
 
-  <script src="/main.js"></script>
+  <script src="../main.js"></script>
 </body>
+
 </html>

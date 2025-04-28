@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias | El Faro</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Avisos | El Faro</title>
+  <link rel="stylesheet" href="/style.css">
   <script src="https://kit.fontawesome.com/2cb25f2c39.js"></script>
   <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
@@ -16,7 +16,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-      <a class="navbar-item" href="../index.php">
+      <a class="navbar-item" href="/api/index.php">
         <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
       </a>
 
@@ -42,9 +42,9 @@
       <div class="navbar-start">
         <a class="navbar-item" href="../paginas/deportes_page.php">Deportes</a>
         <a class="navbar-item " href="../paginas/negocios_page.php">Negocios</a>
-        <a class="navbar-item is-active" href="../paginas/noticias_page.php">Noticias</a>
+        <a class="navbar-item " href="../paginas/noticias_page.php">Noticias</a>
         <a class="navbar-item" href="../paginas/contacto.php">Contacto</a>
-        <a class="navbar-item" href="../paginas/avisos.php">Avisos</a>
+        <a class="navbar-item is-active" href="../paginas/avisos.php">Avisos</a>
         <a class="navbar-item" href="../paginas/registro.php">Registro</a>
       </div>
 
@@ -83,53 +83,37 @@
   </nav>
 
   <section class="seccion">
-    <div class="contador">
-      <div class="button">
-        <p>Total de artículos: <span id="contadorPost">0</span></p>
-      </div>
-    </div>
-    <h2 class="title">Noticias</h2>
+    <br><br>
+    <h2 class="title">Avisos</h2>
     <div class="contenedor-articulos">
 
 
 
       <!-- Artículos estáticos originales -->
       <article class="is-one-third box">
-        <h3 class="title is-4">Elon Musk proyecta un futuro dominado por robots.</h3>
+        <h3 class="title is-4">¡Próximamente contaremos con nuestra propia App!</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Noticias</p>
+          <p><span class="subtitle">Categoría:</span> Avisos</p>
         </button>
-        <p>Elon Musk asegura que los robots humanoides podrían revolucionar la economía, convirtiéndose en un mercado
-          valuado en 10 billones de dólares. Las empresas tecnológicas ya están apostando fuerte por esta tendencia.</p>
+        <p>Estamos desarrollando una aplicación móvil para que vivas toda la experiencia de El Faro desde la palma de tu mano. Noticias, notificaciones en tiempo real y acceso a contenido exclusivo, todo en una sola app. ¡Espérala pronto!</p>
       </article>
 
       <article class="is-one-third box">
-        <h3 class="title is-4">Discos duros NVMe mecánicos por Seagate.</h3>
+        <h3 class="title is-4">¿Te imaginas un juego que te ayude a estudiar?</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Noticias</p>
+          <p><span class="subtitle">Categoría:</span> Avisos</p>
         </button>
-        <p>Seagate sorprende al mundo con discos duros que combinan almacenamiento mecánico y la velocidad de NVMe,
-          marcando un nuevo hito en el desarrollo de hardware.</p>
+        <p>El Faro se une a StudyPals en una colaboración sin precedentes. Prepárate para descubrir un juego que no solo entretiene, sino que también potencia tu productividad. ¡Estudiar nunca fue tan divertido!</p>
       </article>
 
       <article class="is-one-third box">
-        <h3 class="title is-4">Google lanza su chip cuántico Willow.</h3>
+        <h3 class="title is-4">Convocatoria abierta: ¡Forma parte de El Faro!</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Noticias</p>
+          <p><span class="subtitle">Categoría:</span> Avisos</p>
         </button>
-        <p>El nuevo chip cuántico de Google promete resolver problemas complejos en minutos, revolucionando la
-          computación avanzada y dejando atrás las capacidades de los superordenadores actuales.</p>
+        <p>¿Te apasiona escribir, crear contenido o cubrir eventos? Únete a nuestro equipo de colaboradores y sé parte de una comunidad que busca informar, entretener y transformar. Postulaciones abiertas todo abril.</p>
       </article>
 
-      <article class="is-one-third box">
-        <h3 class="title is-4">Robots humanoides comienzan a llegar a los hogares.</h3>
-        <button class="button">
-          <p><span class="subtitle">Categoría:</span> Noticias</p>
-        </button>
-        <p>La robótica doméstica da un salto con la llegada de robots humanoides accesibles al público, facilitando
-          tareas del hogar y ofreciendo soluciones inteligentes.</p>
-      </article>
-      <!-- Artículos dinámicos desde localStorage -->
       <div id="contenedorArticulosNoticias"></div>
     </div>
 
@@ -138,6 +122,6 @@
 
   <?php include('../app/views/partials/footer.php'); ?>
 
-  <script src="../main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

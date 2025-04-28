@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Negocios | El Faro</title>
+  <title>Noticias | El Faro</title>
   <link rel="stylesheet" href="../style.css">
   <script src="https://kit.fontawesome.com/2cb25f2c39.js"></script>
   <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon">
@@ -12,12 +12,11 @@
 </head>
 
 <body>
-
-
+  <!-- MENU DE NAVEGACION -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
-      <a class="navbar-item" href="../index.php">
+      <a class="navbar-item" href="/api/index.php">
         <img src="../imagenes/logo.jpg" alt="Logo" class="logo">
       </a>
 
@@ -42,8 +41,8 @@
 
       <div class="navbar-start">
         <a class="navbar-item" href="../paginas/deportes_page.php">Deportes</a>
-        <a class="navbar-item is-active" href="../paginas/negocios_page.php">Negocios</a>
-        <a class="navbar-item" href="../paginas/noticias_page.php">Noticias</a>
+        <a class="navbar-item " href="../paginas/negocios_page.php">Negocios</a>
+        <a class="navbar-item is-active" href="../paginas/noticias_page.php">Noticias</a>
         <a class="navbar-item" href="../paginas/contacto.php">Contacto</a>
         <a class="navbar-item" href="../paginas/avisos.php">Avisos</a>
         <a class="navbar-item" href="../paginas/registro.php">Registro</a>
@@ -89,69 +88,49 @@
         <p>Total de artículos: <span id="contadorPost">0</span></p>
       </div>
     </div>
-
-    <h2 class="title">Negocios</h2>
-
+    <h2 class="title">Noticias</h2>
     <div class="contenedor-articulos">
+
+
+
       <!-- Artículos estáticos originales -->
       <article class="is-one-third box">
-        <h3 class="title is-4">Las PYMES pueden aprovechar oportunidades en Mercado Público con estos pasos</h3>
+        <h3 class="title is-4">Elon Musk proyecta un futuro dominado por robots.</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Negocios</p>
+          <p><span class="subtitle">Categoría:</span> Noticias</p>
         </button>
-
-        <p>El portal Innova ofrece una guía para que las pequeñas y medianas empresas (PYMES) encuentren oportunidades
-          de negocio en el Mercado Público. Este espacio es clave para acceder a licitaciones y contratos con el Estado.
-          El proceso comienza con la inscripción en el sistema, la búsqueda de licitaciones relacionadas con el giro de
-          la empresa y la preparación de las propuestas. Además, se destacan estrategias para aumentar las posibilidades
-          de éxito, como el cumplimiento de los requisitos técnicos y administrativos y el fortalecimiento de la
-          competitividad.</p>
+        <p>Elon Musk asegura que los robots humanoides podrían revolucionar la economía, convirtiéndose en un mercado
+          valuado en 10 billones de dólares. Las empresas tecnológicas ya están apostando fuerte por esta tendencia.</p>
       </article>
 
       <article class="is-one-third box">
-        <h3 class="title is-4">Confianza de los consumidores chilenos cae debido a apagón, guerra comercial y mayores
-          gastos</h3>
+        <h3 class="title is-4">Discos duros NVMe mecánicos por Seagate.</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Negocios</p>
+          <p><span class="subtitle">Categoría:</span> Noticias</p>
         </button>
-        <p>En marzo de 2025, la confianza de los consumidores en Chile sufrió una caída significativa, afectada por
-          varios factores, como el reciente apagón que afectó al país, la creciente guerra comercial y el aumento de los
-          gastos familiares. Estos elementos han generado incertidumbre económica y disminuido la percepción de los
-          chilenos sobre la estabilidad del mercado. Las proyecciones indican que estos factores seguirán impactando
-          negativamente la confianza de los consumidores en el corto plazo.</p>
+        <p>Seagate sorprende al mundo con discos duros que combinan almacenamiento mecánico y la velocidad de NVMe,
+          marcando un nuevo hito en el desarrollo de hardware.</p>
       </article>
 
       <article class="is-one-third box">
-        <h3 class="title is-4">Acciones de Nvidia y Tesla caen un 6% y pierden 250,000 millones de dólares</h3>
+        <h3 class="title is-4">Google lanza su chip cuántico Willow.</h3>
         <button class="button">
-          <p><span class="subtitle">Categoría:</span> Negocios</p>
+          <p><span class="subtitle">Categoría:</span> Noticias</p>
         </button>
-        <p>Las acciones de Nvidia y Tesla experimentaron una caída significativa del 6% en marzo de 2025, lo que resultó
-          en una pérdida combinada de 250,000 millones de dólares en su capitalización de mercado. Esta caída se produjo
-          en medio de un clima de incertidumbre económica global, impulsada por las políticas comerciales del presidente
-          Trump, que incluyeron nuevos aranceles a las importaciones y restricciones a empresas tecnológicas chinas. Los
-          inversores temen que las tensiones comerciales afecten a la demanda de productos clave, como los chips de
-          inteligencia artificial de Nvidia y los vehículos eléctricos de Tesla.</p>
+        <p>El nuevo chip cuántico de Google promete resolver problemas complejos en minutos, revolucionando la
+          computación avanzada y dejando atrás las capacidades de los superordenadores actuales.</p>
+      </article>
+
+      <article class="is-one-third box">
+        <h3 class="title is-4">Robots humanoides comienzan a llegar a los hogares.</h3>
+        <button class="button">
+          <p><span class="subtitle">Categoría:</span> Noticias</p>
+        </button>
+        <p>La robótica doméstica da un salto con la llegada de robots humanoides accesibles al público, facilitando
+          tareas del hogar y ofreciendo soluciones inteligentes.</p>
       </article>
       <!-- Artículos dinámicos desde localStorage -->
-      <div id="contenedorArticulosNegocios"></div>
-    </div>
-
-
-    <!-- VIDEO SECTION -->
-
-    <h2 class="title">¿Por qué caen los mercados?</h2>
-    <div class="media-container">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/KB_1erbx6vs" frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-
-    <h3 class="subtitle">Jensen Huang (CEO Nvidia): "No aprendas a programar"</h3>
-    <div class="media-container-audio">
-      <audio controls>
-        <source src="../audio/audioNegocios.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-      </audio>
+      <div id="contenedorArticulosNoticias"></div>
     </div>
 
     <a href="../index.html" class="button">Volver al Menú</a>
