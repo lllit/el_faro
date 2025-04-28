@@ -5,8 +5,12 @@
         }
     },
     "routes": [
-        { "src": "/main.js", "dest": "/main.js" },
+        { "src": "/main.js", "dest": "/api/main.js" },
+        { "src": "/style.css", "dest": "/api/style.css" },
+        { "src": "/imagenes/(.*)", "dest": "/api/imagenes/$1" },
+        { "src": "/audio/(.*)", "dest": "/api/audio/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ]
+
 
 }
