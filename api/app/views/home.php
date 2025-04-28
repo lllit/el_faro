@@ -4,7 +4,7 @@
   <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
     <a class="navbar-item" href="./index.php">
-      <img src="/api/imagenes/logo.jpg" alt="Logo" class="logo">
+      <img src="/imagenes/logo.jpg" alt="Logo" class="logo">
     </a>
 
     <!-- Reloj centrado solo en mobile -->
