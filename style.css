@@ -4,7 +4,7 @@
 /* 1. APLICAR TIPOGRAFÍA NUEVA, EN ESTE CASO POPPINS
    2. APLICAR FONDO GRIS (#f5f5f5) *Los artículos en blanco tienen su propia sección
 */
-
+/*------------*/
 :root {
   --fuente_principal: 'Poppins', sans-serif;
   --background: #f5f5f5;
