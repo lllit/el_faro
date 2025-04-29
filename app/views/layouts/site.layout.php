@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro</title>
-    <link rel="stylesheet" href="<?= URL_PATH ?>/Assets/css/style.css">
-    <script src="<?= URL_PATH ?>/Assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="<?= URL_PATH ?>public/Assets/css/style.css">
+    <script src="<?= URL_PATH ?>Assets/js/main.js"></script>
     <link rel="icon" href="<?= URL_PATH ?>/Assets/favicon/favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 
 <body>
-    <?php
-    echo '<pre>';
-    echo "SCRIPT_NAME: " . $_SERVER['SCRIPT_NAME'] . "\n";
-    echo "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
-    echo "URL_PATH: " . $folderPath . "\n";
-    echo '</pre>';
 
-    ?>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 

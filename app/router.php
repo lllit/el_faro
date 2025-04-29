@@ -18,6 +18,10 @@ class Router
         // Divide la URL en segmentos
         $url = explode('/', trim(URL, '/')); // Elimina slashes innecesarios
 
+        if (!empty($url[0]) && strtolower($url[0]) === 'public') {
+            array_shift($url); // Elimina el primer segmento
+        }
+
         // Define controlador y método predeterminados
         $this->controller = !empty($url[0]) ? ucfirst($url[0]) : 'Page'; // Capitaliza el controlador
         $this->method = !empty($url[1]) ? $url[1] : 'home';
@@ -27,7 +31,7 @@ class Router
         $controllerPath = __DIR__ . '/controllers/' . $this->controller . '.php';
 
 
-        
+
 
         // Verifica si el archivo existe
         if (file_exists($controllerPath)) {
