@@ -10,7 +10,7 @@ class Controller
 
 
         // Rutas absolutas para vistas y layouts
-        $viewPath = __DIR__ . '/../Views/' . $path . '.view.php';
+        $viewPath = __DIR__ . '/../views/' . $path . '.view.php';
         $resolvedPath = realpath($viewPath);
 
         // Mostrar la ruta construida y resuelta
@@ -22,7 +22,7 @@ class Controller
         }
 
 
-        $layoutPath = __DIR__ . '/../Views/layouts/' . $layout . '.layout.php';
+        $layoutPath = __DIR__ . '/../views/layouts/' . $layout . '.layout.php';
 
         // Verificar si la vista existe
         if (!file_exists($viewPath)) {
