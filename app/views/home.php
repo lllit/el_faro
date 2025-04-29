@@ -27,12 +27,12 @@
   <div id="navbarMenu" class="navbar-menu">
 
     <div class="navbar-start">
-      <a class="navbar-item" href="/paginas/deportes_page.php">Deportes</a>
-      <a class="navbar-item " href="/paginas/negocios_page.php">Negocios</a>
-      <a class="navbar-item " href="/paginas/noticias_page.php">Noticias</a>
-      <a class="navbar-item" href="/paginas/contacto.php">Contacto</a>
-      <a class="navbar-item" href="/paginas/avisos.php">Avisos</a>
-      <a class="navbar-item" href="/paginas/registro.php">Registro</a>
+      <a class="navbar-item" href="paginas/deportes_page.php">Deportes</a>
+      <a class="navbar-item " href="paginas/negocios_page.php">Negocios</a>
+      <a class="navbar-item " href="paginas/noticias_page.php">Noticias</a>
+      <a class="navbar-item" href="paginas/contacto.php">Contacto</a>
+      <a class="navbar-item" href="paginas/avisos.php">Avisos</a>
+      <a class="navbar-item" href="paginas/registro.php">Registro</a>
     </div>
 
   </div>
