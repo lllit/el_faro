@@ -12,20 +12,8 @@
     ],
     "routes": [
         {
-            "src": "/css/(.*)",
-            "dest": "/Public/css/$1"
-        },
-        {
-            "src": "/js/(.*)",
-            "dest": "/Public/js/$1"
-        },
-        {
-            "src": "/Assets/imagenes/(.*)",
-            "dest": "/Public/Assets/imagenes/$1"
-        },
-        {
-            "src": "/page/(.*)",
-            "dest": "/public/page/$1"
+            "src": "/Assets/(.*)",
+            "dest": "/Public/Assets/$1"
         },
         {
             "src": "/(.*)",
