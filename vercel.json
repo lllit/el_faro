@@ -9,7 +9,7 @@
         { "src": "/style.css", "dest": "/style.css" },
         { "src": "/main.js", "dest": "/main.js" },
         { "src": "/imagenes/(.*)", "dest": "/imagenes/$1" },
-        { "src": "/imagenes/favicon.ico", "dest": "/imagenes/favicon.ico" },
+        { "src": "/favicon.ico", "dest": "/favicon.ico" },
         { "src": "/audio/(.*)", "dest": "/audio/$1" },
         { "src": "/paginas/(.*)", "dest": "/paginas/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
