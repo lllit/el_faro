@@ -13,6 +13,14 @@
 </head>
 
 <body>
+    <?php
+    echo '<pre>';
+    echo "SCRIPT_NAME: " . $_SERVER['SCRIPT_NAME'] . "\n";
+    echo "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
+    echo "URL_PATH: " . $folderPath . "\n";
+    echo '</pre>';
+
+    ?>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
