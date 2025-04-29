@@ -19,7 +19,7 @@
         <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
 
             <a class="navbar-item" href="<?= URL_PATH ?>/page/home">
-                <img src="<?= URL_PATH ?>/Assets/imagenes/logo.jpg" alt="Logo" class="logo">
+                <img src="<?= URL_PATH ?>Assets/imagenes/logo.jpg" alt="Logo" class="logo">
             </a>
 
             <!-- Reloj centrado solo en mobile -->
