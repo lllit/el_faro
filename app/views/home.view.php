@@ -1,50 +1,5 @@
-<!-- app/views/home.php -->
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand is-flex is-align-items-center is-justify-content-space-between">
-
-    <a class="navbar-item" href="/api/index.php">
-      <img src="/imagenes/logo.jpg" alt="Logo" class="logo">
-    </a>
-
-    <!-- Reloj centrado solo en mobile -->
-    <div class="navbar-item reloj-mobile">
-      <div id="fechaHora" class="reloj-cabecera">domingo, 20 de abril de 2025 - 17:02:13</div>
-    </div>
 
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-
-
-  </div>
-
-
-
-  <div id="navbarMenu" class="navbar-menu">
-
-    <div class="navbar-start">
-      <a class="navbar-item" href="/paginas/deportes_page.php">Deportes</a>
-      <a class="navbar-item " href="/paginas/negocios_page.php">Negocios</a>
-      <a class="navbar-item " href="/paginas/noticias_page.php">Noticias</a>
-      <a class="navbar-item" href="/paginas/contacto.php">Contacto</a>
-      <a class="navbar-item" href="/paginas/avisos.php">Avisos</a>
-      <a class="navbar-item" href="/paginas/registro.php">Registro</a>
-    </div>
-
-  </div>
-
-  <!-- Reloj a la derecha en desktop -->
-  <div class="navbar-item reloj-desktop">
-    <div id="fechaHoraDesktop" class="reloj-cabecera">domingo, 20 de abril de 2025 - 17:02:13</div>
-  </div>
-
-
-
-</nav>
 
 
 <nav class="breadcrumb is-right has-bullet-separator" aria-label="breadcrumbs">
@@ -137,7 +92,4 @@
     </div>
   </div>
 </section>
-<script src="/main.js"></script>
-</body>
 
-</html>

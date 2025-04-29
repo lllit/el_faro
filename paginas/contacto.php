@@ -119,7 +119,7 @@
 
 
   </section>
-  </section>
+  
 
   <?php include('../app/views/partials/footer.php'); ?>
 
