@@ -1,4 +1,7 @@
 <?php
+
+
+
 class Router
 {
     private $controller;
@@ -8,6 +11,7 @@ class Router
     {
         $this->matchRoute();
     }
+
 
     public function matchRoute()
     {
@@ -21,6 +25,9 @@ class Router
         // Añade el sufijo 'Controller' y genera la ruta del archivo
         $this->controller .= 'Controller';
         $controllerPath = __DIR__ . '/controllers/' . $this->controller . '.php';
+
+
+        
 
         // Verifica si el archivo existe
         if (file_exists($controllerPath)) {

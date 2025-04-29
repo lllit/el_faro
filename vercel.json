@@ -12,6 +12,10 @@
     ],
     "routes": [
         {
+            "src": "/page/(.*)",
+            "dest": "/public/page/$1"
+        },
+        {
             "src": "/css/(.*)",
             "dest": "/Public/css/$1"
         },
