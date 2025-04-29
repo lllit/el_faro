@@ -10,7 +10,17 @@ class Controller
 
 
         // Rutas absolutas para vistas y layouts
-        $viewPath = realpath(__DIR__ . '/../Views/' . $path . '.view.php');
+        $viewPath = __DIR__ . '/../Views/' . $path . '.view.php';
+        $resolvedPath = realpath($viewPath);
+
+        // Mostrar la ruta construida y resuelta
+        error_log("Ruta construida: $viewPath");
+        error_log("Ruta resuelta por realpath: $resolvedPath");
+        // Lanzar un mensaje más claro si falla
+        if (!$resolvedPath) {
+            throw new Exception("La vista '{$path}.view.php' no pudo ser resuelta. Ruta buscada: $viewPath");
+        }
+
 
         $layoutPath = __DIR__ . '/../Views/layouts/' . $layout . '.layout.php';
 
@@ -30,6 +40,5 @@ class Controller
         } else {
             echo $content; // Renderizar solo el contenido si no hay un layout
         }
-        
     }
 }
