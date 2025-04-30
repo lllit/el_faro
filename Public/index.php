@@ -1,7 +1,4 @@
 <?php
-    //require_once __DIR__ . '/../app/autoload.php';
-    //set_include_path(__DIR__ . '/../app/');
-    //require_once 'autoload.php';
     // Construir una ruta absoluta hacia autoload.php
     $autoloadPath = realpath(__DIR__ . '/../app/autoload.php');
 

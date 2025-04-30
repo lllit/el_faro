@@ -22,11 +22,21 @@ class Router
             array_shift($url); // Elimina el primer segmento
         }
 
-        // Define controlador y método predeterminados
-        $this->controller = !empty($url[0]) ? ucfirst($url[0]) : 'Page'; // Capitaliza el controlador
-        $this->method = !empty($url[1]) ? $url[1] : 'home';
+        if (!empty($url[0]) && strtolower($url[0]) === 'page') {
+            $this->controller = 'Page';
+            $this->method = !empty($url[1]) ? $url[1] : 'home';
+        } else {
+            // Controlador y método predeterminados
+            $this->controller = !empty($url[0]) ? ucfirst($url[0]) : 'Page';
+            $this->method = !empty($url[1]) ? $url[1] : 'home';
+        }
 
-        // Añade el sufijo 'Controller' y genera la ruta del archivo
+
+        // Define controlador y método predeterminados
+        //$this->controller = !empty($url[0]) ? ucfirst($url[0]) : 'Page'; // Capitaliza el controlador
+        //$this->method = !empty($url[1]) ? $url[1] : 'home';
+
+        // Añade el sufijo 'Controller' y genera el path del archivo
         $this->controller .= 'Controller';
         $controllerPath = __DIR__ . '/controllers/' . $this->controller . '.php';
 
