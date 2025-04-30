@@ -17,7 +17,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/Public/index.php" 
+            "dest": "/api/index.php"
         }
     ]
 }
