@@ -15,15 +15,17 @@ class Router
 
     public function matchRoute()
     {
-        // Divide la URL en segmentos
-        $url = explode('/', trim(URL, '/')); // Elimina slashes innecesarios
+        // Divide la URL en segmentos y elimina slashes innecesarios
+        $url = explode('/', trim(URL, '/'));
 
+        // Si el primer segmento es 'public', lo eliminamos
         if (!empty($url[0]) && strtolower($url[0]) === 'public') {
             array_shift($url); // Elimina el primer segmento
         }
 
+        // Fuerza el uso de PageController para todas las rutas bajo 'page'
         if (!empty($url[0]) && strtolower($url[0]) === 'page') {
-            $this->controller = 'Page';
+            $this->controller = 'Page'; // Siempre usa PageController
             $this->method = !empty($url[1]) ? $url[1] : 'home';
         } else {
             // Controlador y método predeterminados
@@ -31,17 +33,14 @@ class Router
             $this->method = !empty($url[1]) ? $url[1] : 'home';
         }
 
-
-        // Define controlador y método predeterminados
-        //$this->controller = !empty($url[0]) ? ucfirst($url[0]) : 'Page'; // Capitaliza el controlador
-        //$this->method = !empty($url[1]) ? $url[1] : 'home';
-
         // Añade el sufijo 'Controller' y genera el path del archivo
         $this->controller .= 'Controller';
+
+        echo $this->controller ."<br>";
+
         $controllerPath = __DIR__ . '/controllers/' . $this->controller . '.php';
-
-
-
+        
+        echo $controllerPath;
 
         // Verifica si el archivo existe
         if (file_exists($controllerPath)) {
@@ -50,6 +49,7 @@ class Router
             die("Error 404: El controlador '{$this->controller}' no fue encontrado en '{$controllerPath}'.");
         }
     }
+
 
 
     public function run()
